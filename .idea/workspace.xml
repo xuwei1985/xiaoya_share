@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4d21613-887a-4dcc-a3fb-cca7c75ff97c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/style/daao_wechat.css" afterPath="$PROJECT_DIR$/style/daao_wechat.css" />
-    </list>
+    <list default="true" id="f4d21613-887a-4dcc-a3fb-cca7c75ff97c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,12 +124,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516027574565</updated>
-      <workItem from="1516027576895" duration="1327000" />
+      <workItem from="1516027576895" duration="1356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1327000" />
+    <option name="totallyTimeSpent" value="1356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="226" y="452" width="1680" height="1050" extended-state="0" />
