@@ -1,0 +1,345 @@
+﻿body 
+{
+    word-break:hyphenate;
+    margin: 0;
+    padding: 0px;
+    text-align: left;
+    font-size: 16px;
+    font-family: Arial;
+    overflow-x: hidden;
+}
+
+.clear {
+    clear:both;
+}
+
+p {
+    margin:17px 0 17px 0;
+    line-height:30px;
+}
+
+section {
+    font-size:18px;
+}
+
+ul {
+    margin:0;
+}
+
+span
+{
+     line-height:30px;
+    }
+
+fieldset{margin-bottom:10px; font-size:14px;}
+		
+
+.mainPage {
+	margin: 70px 0 48px 0;
+    width:100%;
+}
+
+.contentSplit {
+    height:15px;
+    background-color:#ececec;
+}
+
+.contentSplit2 {
+    height:32px;
+	line-height:32px;
+	color:#999;
+	text-align:center;
+	font-size:12px;
+    background-color:#ececec;
+}
+
+.topicContent
+{
+	padding:15px;
+}
+
+.topicContent #lblContent
+{
+	color:#444;
+	line-height:25px;
+}
+
+.itemPic{
+    display:block;
+    margin-top:10px;
+    width:100%;
+}
+
+.mainPage .info_basic {
+    position:relative;
+	margin:15px;
+}
+.mainPage .info_basic .basic_left {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100px;
+    height:72px;
+    background-color:#eee;
+	overflow:hidden;
+}
+
+
+.mainPage .info_basic .basic_right {
+    width:auto;
+    height:72px;
+    float:left;
+    margin-left:110px
+}
+
+.mainPage .info_basic .basic_right .topicTitle
+{
+    color:#000;
+    font-size:16px;
+    line-height:20px;
+	word-wrap:break-word;
+}
+
+.mainPage .info_basic .basic_right .nickname,.publishTime
+{
+    color:#666;
+    font-size:12px;
+	font-weight:100;
+}
+.nickname{
+	overflow:hidden;
+	width:100px;
+	height:20px;
+	 white-space:nowrap;
+	 text-overflow:clip;
+}
+
+    .mainPage .info_basic .basic_right #userHeader {
+       width:16px;
+       height:16px;
+       border-radius:8px;
+       overflow:hidden;
+	  
+    }
+
+.mainPage .rentInfo{
+	padding:5px 15px;
+}
+.mainPage .rentInfo .rentField{
+	width:65px;
+	height:35px;
+	font-size:14px;
+	color:#777;
+	text-align:left;
+	border-bottom:1px solid #ececec;
+}
+
+.mainPage .rentInfo .rentValue{
+	font-size:14px;
+	height:35px;
+	text-align:left;
+	color:#333;
+	border-bottom:1px solid #ececec;
+}
+
+.mainPage .rentInfo .lastone{
+	border-bottom:0px solid #ececec;
+}
+
+
+body.disable-default-action
+{
+    -webkit-touch-callout:none ;
+    -webkit-user-select:none ;
+}
+
+
+.cityNav{
+    margin:0;
+    padding:0;
+    height:46px;
+	background-image:url('../Images/1_26.png');
+}
+
+.cityNav li{
+    float:left;
+    list-style-type:none;
+    padding:0 15px;
+    font-size:20px;
+	font-weight:bold;
+    color:#fff;
+    height:46px;
+    line-height:46px;
+    text-align:center;
+}
+
+.iconNav{
+    margin:20px 0px 10px 0;
+    padding:0;
+    height:100px;
+}
+
+.iconNav li{
+    float:left;
+    list-style-type:none;
+    width:25%;
+    height:80px;
+    text-align:center;
+}
+
+.iconNav li img{
+	width:64px;
+	height:64px;
+}
+
+.iconNav li span{
+	font-size:14px;
+    color:#555;
+	line-height:16px;
+}
+
+.downBtn{
+	height:40px;
+	text-align:center;
+}
+
+.downBtn img{
+	width:93%;
+}
+
+ 
+.adv_bottom {
+    position:fixed;
+    bottom:0;
+    height:48px; 
+    width:100%; 
+    opacity:0.85;
+    background-color:#000;
+    color:#fff;
+    padding:5px 5px 3px 6px;
+	
+}
+
+    .adv_bottom .b_logo {
+        width:40px;
+        height:40px;
+        border-radius:6px;
+    }
+
+ .adv_bottom #bottomLbl {
+		font-size:22px;
+		
+    }
+ .adv_bottom .quickOpen{
+	display:block;
+	text-decoration:none;
+	border-radius:3px;
+	width:60px;
+	padding:5px	8px;
+	background-color:#f54343;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+ }
+ 
+.adv_down {
+    height:64px; 
+    width:100%; 
+    background-color:#555;
+    color:#fff;
+    padding-top:15px;
+    padding-bottom:6px;
+    margin-bottom: 0px;
+	
+}
+
+    .adv_down .b_logo {
+        width:50px;
+        height:50px;
+        border-radius:6px;
+    }
+
+ .adv_down #bottomLbl {
+		font-size:22px;
+		
+    }
+ .adv_down .quickOpen{
+	display:block;
+	text-decoration:none;
+	border-radius:3px;
+	width:60px;
+	padding:5px	8px;
+	background-color:#f54343;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+ }
+ 
+ 
+ 
+.littelink{
+	 margin: 5px 10%;
+}
+.littelink li
+{
+	float: left;
+	width: 23.5%;
+	text-align: center;
+}
+
+.littelink li a
+{
+	font-size: 14px;
+	color: #0d8dd6;
+	height: 24px;
+}
+
+.newsRandom .mutiimg{
+	padding:10px 5px 7px 12px; 
+	vertical-align:top;
+}
+
+.topstyle{
+	background-color:#555;
+}
+
+.readnum{
+	padding-left: 12px;
+	font-size: 11px;
+	color: #999;
+	line-height: 12px;
+	float: left;
+	margin: 5px 0 3px 0;
+}
+
+.openxy{
+	float: right;
+	padding: 2px 3px;
+	border-radius: 3px;
+	border:1px solid #bbb;
+	text-align: center;
+	font-size: 10px;
+	line-height: 12px;
+	color: #888;
+	overflow: hidden;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+.newsRandom .mutiimg .mutitext{
+	font-weight:bold; 
+	color:#555;
+	line-height: 22px;
+}
+
+.newsRandom .imgGroup{
+	margin-bottom: 0px;
+}
+
+
+.topstyle .mutiimg .mutitext,.topstyle .openxy,.topstyle .readnum{
+	color:#fff;;
+}
+
+ 
+ 

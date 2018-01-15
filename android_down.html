@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta name="screen-orientation" content="portrait" />
+<title></title>
+<style type="text/css">
+.maskbg {
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:#000000;
+    opacity:0.85;
+}
+
+.downtip {
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    padding:0 24px 0 34px;
+}
+
+    .downtip p {
+        font-size:18px;
+        text-align:left;
+        line-height:34px;
+        color:#fff;
+		margin:25px 0;
+    }
+</style>
+<script src="Scripts/jquery-1.11.1.min.js"></script>
+	<script>
+		function is_weixn() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+		
+		$(function(){
+			$.extend({
+                urlGet: function () {
+                    var aQuery = window.location.href.split("?");  //鍙栧緱Get鍙傛暟
+                    var aGET = new Array();
+                    if (aQuery.length > 1) {
+                        var aBuf = aQuery[1].split("&");
+                        for (var i = 0, iLoop = aBuf.length; i < iLoop; i++) {
+                            var aTmp = aBuf[i].split("=");  //鍒嗙key涓嶸alue
+                            aGET[aTmp[0]] = aTmp[1];
+                        }
+                    }
+                    return aGET;
+                }
+            })
+			var get = $.urlGet();
+
+			$(".downloadBar").click(function(){
+				var ttop = 150 + $(document).scrollTop();
+				if (is_weixn()) {
+					$(".maskbg").css({
+                        "width": document.documentElement.clientWidth+"px",
+                        "height":document.body.scrollHeight+"px",
+						"opacity":0.85
+                    });
+					
+                    $(".downtip").css({
+                        "top": ttop,
+                    });
+                    $(".maskbg").show();
+                    $(".downtip").show();
+				}
+				else{
+					$(".maskbg").hide();
+                    $(".downtip").hide();
+					window.location.href="http://7xloa9.com5.z0.glb.clouddn.com/app-release.apk";
+				}
+			});
+
+            $(".maskbg").click(function () {
+                $(".maskbg").hide();
+                $(".downtip").hide();
+
+            });
+
+            $(".downtip").click(function (event) {
+                $(".maskbg").hide();
+                $(".downtip").hide();
+            });
+
+            $("#closeBtn").click(function (event) {
+                $(".adv_bottom").hide();
+            });
+		});
+	</script>
+</head>
+<body style="background-image:url('images/bg.jpg'); background-repeat:repeat;">
+
+<img src="http://img.wiloop.net/wilson100K108022%20%281%29.jpg" width="100%" />
+<div class="downloadBar" style="width:100%;height:52px; background-color:#da2021; text-align:center;  position:fixed;bottom:0;left:0;"><a id="dapp" style="font-size:18px; color:#fff; line-height:52px; text-decoration:none;" href="javascript:void(0);">立即下载</a></div>
+<div class="maskbg" ></div>
+<div class="downtip">
+	<p>点击右上角的“…” 选择“在浏览器中打开”，再次点击下载按钮即可下载小芽海外啦！</p>
+</div>
+
+<div class="courseImg" style="background-color: #f00;"><img src="Images/AppIcon.png"></div>
+</body> 
+</html>

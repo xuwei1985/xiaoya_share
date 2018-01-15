@@ -1,0 +1,268 @@
+*{
+	margin: 0;
+	padding: 0;
+/*
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+*/
+}
+
+ul li{
+	list-style-type: none;
+}
+
+.clear{
+	clear: both;
+}
+
+body{
+	background-color:#fff;
+}
+
+#header{
+	text-align: center;
+	height: 71px;
+	position: fixed;
+	top: 0;
+	background-color: #da2121;
+	width: 100%;
+	z-index: 20000;
+}
+
+#header2{
+	text-align: center;
+	height: 44px;
+	position: fixed;
+	top: 0;
+	background-color: #da2121;
+	width: 100%;
+	z-index: 10000;
+}
+
+#header .messageBtn{
+	float: left;
+	margin-left: 10px;
+	margin-top: 8px;
+	width: 28px;
+	height: 28px;
+}
+
+#header .titleBtn{
+	margin-top: 10px;
+	width: 128px;
+}
+
+#header .searchBtn{
+	float: right;
+	margin-right: 10px;
+	margin-top: 8px;
+	width: 28px;
+	height: 28px;
+}
+
+#header2 .messageBtn{
+	float: left;
+	margin-left: 10px;
+	margin-top: 8px;
+	width: 28px;
+	height: 28px;
+}
+
+#header2 .titleBtn{
+	margin-top: 10px;
+	width: 88px;
+}
+
+#header2 .searchBtn{
+	float: right;
+	margin-right: 10px;
+	margin-top: 8px;
+	width: 28px;
+	height: 28px;
+}
+
+.tabbar{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color:#efefef;
+	border-top: 1px solid #ccc;
+	z-index: 9999;
+}
+
+.tabbar2{
+	opacity: 0.82;
+	display: none;
+	background-color:#000;
+}
+
+.tabbar li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	padding: 6px 0 2px 0;
+}
+
+.tabbar img{
+	width: 23px;
+	height: 23px;
+}
+
+.tabbar a{
+	display: block;
+	height: 18px;
+	line-height: 18px;
+	font-size: 11px;
+	font-weight: normal;
+	color: #666;
+	text-decoration: none;
+}
+
+.tabbar2 a{
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+
+.tabbar a.selected{
+	color:#da2121;
+}
+
+.navTab{
+	background-color: #e9e9e9;
+	height: 34px;
+}
+
+.navTab li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	line-height: 36px;
+}
+
+.navTab li a{
+	font-size: 16px;
+	color: #333;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.navTab a.selected{
+	color:#da2121;
+}
+
+
+.bluetext{
+	color: #15abdc;
+}
+
+.banner{
+	position: relative;
+}
+
+.banner img{
+	width: 100%;
+}
+
+.banner .titlebar{
+	width: 100%;
+	position: absolute;
+	z-index: 10000;
+	bottom: 5px;
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.90));  
+}
+
+.banner .titlebar span{
+	display: block;
+	width: 96%;
+	color: #fff;
+	font-size: 18px;
+	line-height: 40px;
+	text-shadow: none;
+	font-weight: bold;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 0 10px 0 10px;
+}
+
+.weather{
+	margin-top: 5px;
+	padding-bottom: 6px;
+}
+
+.weather ul{
+	margin-bottom: 5px;
+}
+
+.weather ul li{
+	text-align: center;
+	width: 25%;
+	float: left;
+	font-size: 14px;
+	color: #444;
+	line-height: 20px;
+}
+
+.weather .weathericon{
+	width: 36px;
+	height: 36px;
+}
+
+.weather .city{
+	text-align: center;
+	display: block;
+}
+
+.weather .tem{
+	text-align: center;
+	display: block;
+}
+
+.rate{
+	color: #555;
+	line-height: 32px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+.rate .bluetext{
+	margin-left: 0;
+}
+
+.ratetime{
+	margin-left: 15px;
+	margin-top: 5px;
+	margin-right: 6px;
+	padding: 0px 3px;
+	float: left;
+	color: #0d8dd6;
+	font-size: 11px;
+	line-height: 19px;
+	border:1px solid #0d8dd6;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.rate .rappbtn{
+	margin-left: 15px;
+	display: block;
+	margin-top: 5px;
+	margin-right: 15px;
+	padding: 3px 6px;
+	float: left;
+	color: #0d8dd6;
+	font-size: 18px;
+	line-height: 18px;
+	border:1px solid #0d8dd6;
+	border-radius: 4px;
+	overflow: hidden;
+}

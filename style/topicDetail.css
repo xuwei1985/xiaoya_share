@@ -1,0 +1,449 @@
+body 
+{
+    margin: 0;
+    padding: 0px;
+    word-wrap: break-word; 
+    text-align: left;
+    font-size: 16px;
+    font-family: Arial;
+    overflow-x: hidden;
+    background-color:#fff;
+}
+
+p {
+    margin:17px 0 17px 0;
+    line-height:30px;
+}
+
+section {
+    font-size:18px;
+}
+
+ul {
+    padding:0;
+    margin:0;
+}
+
+#content{
+	margin: 75px 0 0 0;
+}
+
+.littelink{
+	 margin: 5px 10%;
+}
+.littelink li
+{
+	float: left;
+	width: 23.5%;
+	text-align: center;
+}
+
+.littelink li a
+{
+	font-size: 14px;
+	color: #0d8dd6;
+	height: 24px;
+}
+
+
+.nextPage{
+	padding: 16px 0;
+	text-align: center;
+	font-size: 14px;
+	color: #999;
+}
+
+.topicBlock{
+	padding: 15px;
+}
+
+ .randomTopic{
+	 padding: 15px;
+ }
+ 
+ .topicBlock{
+	 overflow: hidden;
+	 margin-bottom: 45px;
+ } 
+ 
+ .switchTopicBlock{
+	 font-size: 14px;
+	 color: #444;
+	 text-align: center;
+	 background-color: #fafafa;
+	 margin-bottom: 15px;
+	 padding: 5px 0;
+ }
+  .switchTopicBlock img{
+	 position: relative;
+	 top: 2px;
+	 left: 2px;
+ }
+ .topicTitle{ padding: 5px 0; }
+ .topicTitle span{
+	 font-size: 22px;
+	 color: #333;
+	 line-height: 30px;
+	 font-weight: bold;
+ }
+ 
+ .topic_info{
+ 	margin: 5px 0 8px 0;
+ }
+ 
+ .topic_info .topic_count{
+	 float: left;
+	 color: #555;
+	 font-size: 12px;
+	 padding: 3px 0px;
+	 line-height: 18px;
+ }
+ 
+  .topic_info #btnShare{
+	 float: right;
+	 color: #555;
+	 font-size: 12px;
+	 text-decoration: none;
+	 border: 1px solid #efefef;
+	 border-radius: 14px;
+	 padding: 2px 15px 2px 8px;
+	 line-height: 18px;
+	 background-image: url('../Images/shareArrow.png');
+	 background-repeat: no-repeat;
+	 background-position: 57px center;
+	 background-size:9px;
+ }
+  .user_info{
+ 	margin: 5px 0 5px 0;
+ 	position: relative;
+ }
+ 
+ .user_info #userHead{
+	 float: left;
+	 width: 20px;
+	 height: 20px;
+	 border-radius: 10px;
+	 overflow: hidden;
+ }
+ 
+ .user_info #userName{
+	 float: left;
+	 color: #555;
+	 font-size: 12px;
+	 line-height: 18px;
+	 margin-left: 5px;
+	 margin-top: 4px;
+ }
+ 
+ .user_info #updateTime{
+	 float: left;
+	 color: #555;
+	 font-size: 12px;
+	 line-height: 18px;
+	 margin-left: 20px;
+	 margin-top: 4px;
+ }
+ 
+ .topicContent{
+	 font-size: 20px;
+	 color: #000;
+	 margin-bottom: 10px;
+	 line-height: 34px;
+ }
+ 
+  .topicContent img{
+	 display: block;
+	 width: 100%;
+	 margin: 4px 0;
+ }
+ 
+ 
+ .replyBar {
+	 text-align: right;
+	 margin: 20px 0 38px 0;
+ }
+ 
+.btnReply{
+	position: fixed;
+	bottom: 25px;
+	right: 5px;
+	opacity: 0.9;
+	 background-color: #f93859;
+	 text-decoration: none;
+	 font-size: 22px;
+	 color: #fff;
+	 line-height: 30px;
+	 padding: 12px 19px 12px 40px;
+	 text-align: center;
+	 border-radius: 4px;
+	 background-image: url('../Images/1_07.png');
+	 background-repeat: no-repeat;
+	 background-position: 10px center;
+	 background-size:30px;
+ }
+ 
+ .topicCommentList{
+	  width: 100%;
+ }
+ 
+ .myCommentList{
+	 margin: 10px 0;
+ }
+ 
+ .topicCommentList li{
+	  margin-top: 18px;
+	  border-top: 1px solid #ccc;
+	  padding-top: 12px;
+ }
+  
+.topicCommentList .commentInfo .avatar{
+	 float: left;
+	 width: 28px;
+	 height: 28px;
+	 border-radius: 14px;
+	 margin-right: 4px;
+	 margin-top: 3px;
+	 }
+ 
+.topicCommentList .commentInfo .nickname{
+	float: left;
+	position: relative;
+	top: 0px;
+	color: #0088cc;
+	font-size: 15px;
+	margin-left: 2px;
+}
+
+.creatTime{
+	clear: both;
+	float: left;
+	position: relative;
+	top: 22px;
+	color: #aaa;
+	font-size: 11px;
+	left: 34px;
+    position: relative;
+    top: -10px;
+}
+
+.topicCommentList .commentInfo .userfloor{
+	 float: right;
+	 color: #777;
+	 font-size: 12px;
+	 line-height: 28px;
+}
+ 
+ .topicCommentList .commentContent{
+	 margin-top: 15px;
+	 line-height: 26px;
+	 color: #333;
+	 font-size: 17px;
+ }
+ 
+  .topicCommentList  .commentContent .replySource{
+	 background-image: url('../Images/first_upleft@2x.png');
+	 background-repeat: no-repeat;
+	 background-position: 0 4px;
+	 background-size:36px;
+	 padding-top: 12px;
+	 margin-bottom: 5px;
+  }
+  
+   .topicCommentList .commentContent .replyInfo{
+	   background-color: #f5f5f5;
+	   min-height: 40px;
+	   border-radius: 3px;
+	   padding: 10px;
+   }
+   
+   .topicCommentList .replySource .commentContent{
+	   font-size: 15px;
+	   color: #555;
+	   line-height: 20px;
+   }
+   
+  .commentReplyToolBar{
+	text-align: right;
+	margin-top:10px;
+}
+
+.commentReplyToolBar img{
+	position: relative;
+	top: 3px;
+	width: 16px;
+	margin-right: 3px;
+}
+
+ .topicCommentList .commentReplyToolBar .btnReplyUser{
+	 font-size: 13px;
+	 color: #4271b8;
+	 line-height: 22px;
+	 text-decoration: none;
+ }
+ 
+ 
+ .moreComment2{
+	 margin: 2px 0 20px 0;
+	 text-align: center;
+	 color: #027afe;
+	 font-size: 17px;
+	 font-weight: bold;
+ }
+ 
+  .moreComment2 img{
+	  width: 15px;
+	  position: relative;
+	  top: 2px;
+	  left: 3px;
+  }
+ 
+  .commentTool{
+	  border: 1px solid #ccc;
+	  margin: 15px 0;
+	  height: 36px;
+  }
+ .commentTool .btnShare_bottom{
+	 float: left;
+	 width: 43%;
+	 text-align: center;
+	 font-size: 16px;
+	 color: #333;
+	 height: 36px;
+	 line-height: 36px;
+	 text-decoration: none;
+	 background-image: url('../Images/sharetopic.png');
+	 background-repeat: no-repeat;
+	 background-position: 37% center;
+	 background-size:20px;
+	 padding-left: 7%;
+ }
+ 
+ .commentTool .btnReply_bottom{
+	 width: 40%;
+	 border-left: 1px solid #ccc;
+	 float: left;
+	 text-align: center;
+	 font-size: 16px;
+	 color: #333;
+	 height: 36px;
+	 line-height: 36px;
+	 text-decoration: none;
+	 background-image: url('../Images/1_13.png');
+	 background-repeat: no-repeat;
+	 background-position: 35% center;
+	 background-size:22px;
+	 padding-left: 7%;
+ }
+ 
+ .commentBar{
+	width: 100%;
+	height: 150px;
+	margin-bottom: 20px;
+ }
+ 
+ .commentBar .txtComment{
+	 display: block;
+	 width: 97%;
+	 height: 90px;
+	 font-size: 15px;
+	 border: 1px solid #ccc;
+	 padding: 3px;
+	 color: #333;
+ }
+ 
+ .commentBar .btnSendComment{
+	 float: right;
+	 height: 30px;
+	 margin: 10px 0 0 0;
+	 font-size: 14px;
+	 text-decoration: none;
+	 text-align: center;
+	 border-radius: 4px;
+	 color: #fff;
+	 background-color: #2991d7;
+	 padding: 4px 14px;
+	 line-height: 30px;
+ }
+ 
+ .commentBar .replyFloor{
+	 float: left;
+	 color: #4271b8;
+	 font-size: 14px;
+	 margin-top:10px;
+ }
+ .commentBar .btnClose{
+	 display: none;
+	 float: left;
+	 width: 21px;
+	 margin-top: 8px;
+	 margin-left: 2px;
+ }
+ 
+ .btnRechange{
+	 color: #a3a3a3;
+	 font-size: 12px;
+	 font-weight: normal;
+	 margin-left: 6px;
+	 padding: 2px 4px;
+	 border: 0.5px solid #a3a3a3;
+	 border-radius: 4px;
+ }
+ 
+ .btnRechange img{
+	 width: 14px;
+	 position: relative;
+	 top: 3px;
+	 margin-right: 2px;
+ }
+ 
+ #adminBar{
+	 margin-top: 10px;
+	 display: none;
+ }
+ 
+#adminBar input{
+	  font-size: 14px;
+	  font-size: 12px;
+  }
+  
+ #matchUserHead{
+	 margin-left: 20px;
+	 width: 28px;
+	 height: 28px;
+	 border-radius: 14px;
+	 overflow: hidden;
+ }
+ 
+ #matchUserName{
+	 font-size: 14px;
+	 margin-left: 5px;
+	 color: #777;
+ }
+/*  分享提示遮罩 */
+ .maskbg {
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:#000000;
+    opacity:0.85;
+    z-index: 999998;
+}
+
+.downtip {
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    z-index: 999999;
+}
+
+    .downtip p {
+	    text-align: right;
+        font-size:18px;
+        line-height:34px;
+        color:#fff;
+		margin:25px 0;
+		padding:0 24px 0 34px;
+    }

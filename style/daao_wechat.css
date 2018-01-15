@@ -1,0 +1,135 @@
+
+body 
+{
+    margin: 0;
+    padding: 0px;
+    word-wrap: break-word; 
+    text-align: left;
+    font-size: 16px;
+    font-family: Arial;
+    overflow-x: hidden;
+    background-color:#fff;
+}
+
+p {
+    margin:17px 0 17px 0;
+    line-height:30px;
+}
+
+
+.topstyle .mutiimg .mutitext,.topstyle .openxy,.topstyle .readnum{
+	color:#fff;;
+}
+
+
+section {
+    font-size:18px;
+}
+
+ul {
+    padding:0;
+    margin:0;
+}
+
+.readnum{
+	padding-left: 12px;
+	font-size: 11px;
+	color: #999;
+	line-height: 12px;
+	float: left;
+	margin: 5px 0 3px 0;
+}
+
+
+.container-fluid {
+    padding: 15px;
+}
+fieldset{margin-bottom:10px; font-size:14px;}
+
+#content{
+	margin: 130px 0 0 0;
+}
+
+.newscontent{}
+
+#lblTitle {
+    font-size: 22px;
+    color: #333;
+    display: block;
+    font-weight: bold;
+}
+
+.row-fluid {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#lblCopyFrom,#lblTime{
+	font-size:10px; 
+	color:#333;
+}
+		
+#lblContent
+{
+	color:#444;
+	line-height:25px;
+}
+    
+.clear {
+    clear:both;
+}
+
+.top_block{
+	width: 100%;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+}
+
+.top_block img{
+	width: 100%;
+	display: block;
+}
+
+.random_orders{
+	width: 100%;
+	height: 78px;
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+}
+
+.random_orders .order_box{
+	position: absolute;
+	width: 90%;
+	height: 38px;
+	background-color: #5a5a5a;
+	overflow: hidden;
+	border-radius: 19px;
+	left: 5%;
+	top: 20px;
+}
+
+#order_icon{
+ 	float: left;
+ 	width: 34px;
+}
+
+#order_title{
+	float: left;
+}
+
+#order_time{
+	float: right;
+}
+
+/*  分享提示遮罩 */
+ .maskbg {
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:#000000;
+    opacity:0.85;
+    z-index: 999998;
+}

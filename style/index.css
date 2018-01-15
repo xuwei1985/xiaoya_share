@@ -1,0 +1,64 @@
+﻿body 
+{
+   word-break:break-all;
+    margin: 0;
+    padding: 0px;
+    word-break: break-all; /*支持IE，chrome，FF不支持*/
+    　　word-wrap: break-word; /*支持IE，chrome，FF*/
+    text-align: left;
+    font-size: 16px;
+    font-family: Arial;
+    overflow-x: hidden;
+    
+}
+
+p {
+    margin:17px 0 17px 0;
+    line-height:30px;
+}
+
+section {
+    font-size:18px;
+}
+
+ul {
+    margin:0;
+}
+
+span
+{
+     line-height:30px;
+    }
+
+
+.container-fluid {
+    padding:15px;
+   
+}
+
+fieldset{margin-bottom:10px; font-size:14px;}
+
+
+#lblTitle {
+    font-size: 22px;
+    color: #333;
+    display: block;
+    font-weight: bold;
+}
+
+.row-fluid {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#lblCopyFrom,#lblTime{
+	font-size:10px; 
+	color:#333;
+}
+		
+#lblContent
+{
+	color:#444;
+	line-height:25px;
+}
+
