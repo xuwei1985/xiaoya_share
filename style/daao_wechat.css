@@ -101,26 +101,38 @@ fieldset{margin-bottom:10px; font-size:14px;}
 
 .random_orders .order_box{
 	position: absolute;
-	width: 90%;
-	height: 38px;
-	background-color: #5a5a5a;
+	width: 86%;
+	height: 36px;
+	background-color: #6d6d6d;
 	overflow: hidden;
 	border-radius: 19px;
-	left: 5%;
+	left: 7%;
 	top: 20px;
 }
 
 #order_icon{
- 	float: left;
- 	width: 34px;
+	float: left;
+	width: 30px;
+	border-radius: 50%;
+	position: absolute;
+	top: 3px;
+	left: 3px;
 }
 
 #order_title{
 	float: left;
+	padding-left: 38px;
+	line-height: 36px;
+	color: #fff;
+	font-size: 14px;
 }
 
 #order_time{
 	float: right;
+	color: #eee;
+	font-size: 12px;
+	padding-right: 10px;
+	line-height: 36px;
 }
 
 /*  分享提示遮罩 */
