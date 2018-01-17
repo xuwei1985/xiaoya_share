@@ -6,6 +6,8 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 <meta name="screen-orientation" content="portrait" />
+	<script src="Script/jquery-1.11.1.min.js"></script>
+	<script src="Script/client.js"></script>
 <title></title>
 <style type="text/css">
 .maskbg {
@@ -33,7 +35,7 @@
 		margin:25px 0;
     }
 </style>
-<script src="Scripts/jquery-1.11.1.min.js"></script>
+
 	<script>
 		function is_weixn() {
             var ua = navigator.userAgent.toLowerCase();
@@ -79,7 +81,12 @@
 				else{
 					$(".maskbg").hide();
                     $(".downtip").hide();
-					window.location.href="http://7xloa9.com5.z0.glb.clouddn.com/app-release.apk";
+                    if(client.system.iphone||client.system.ipad||client.system.ipod||client.system.mac){
+                        window.location.href="https://itunes.apple.com/us/app/小芽澳洲-澳大利亚新闻租房神器/id958162100?l=zh&ls=1&mt=8";
+                    }
+                    else {
+                        window.location.href="http://7xloa9.com5.z0.glb.clouddn.com/app-release.apk";
+					}
 				}
 			});
 
@@ -109,6 +116,6 @@
 	<p>点击右上角的“…” 选择“在浏览器中打开”，再次点击下载按钮即可下载小芽海外啦！</p>
 </div>
 
-<div class="courseImg" style="background-color: #f00;"><img src="Images/AppIcon.png"></div>
+<!--<div class="courseImg" style="background-color: #f00;"><img src="Images/AppIcon.png"></div>-->
 </body> 
 </html>

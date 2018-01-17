@@ -102,7 +102,7 @@ fieldset{margin-bottom:10px; font-size:14px;}
 .random_orders .order_box{
 	position: absolute;
 	width: 86%;
-	height: 36px;
+	height: 32px;
 	background-color: #6d6d6d;
 	overflow: hidden;
 	border-radius: 19px;
@@ -112,7 +112,7 @@ fieldset{margin-bottom:10px; font-size:14px;}
 
 #order_icon{
 	float: left;
-	width: 30px;
+	width: 26px;
 	border-radius: 50%;
 	position: absolute;
 	top: 3px;
@@ -122,7 +122,7 @@ fieldset{margin-bottom:10px; font-size:14px;}
 #order_title{
 	float: left;
 	padding-left: 38px;
-	line-height: 36px;
+	line-height: 32px;
 	color: #fff;
 	font-size: 14px;
 }
@@ -132,7 +132,30 @@ fieldset{margin-bottom:10px; font-size:14px;}
 	color: #eee;
 	font-size: 12px;
 	padding-right: 10px;
-	line-height: 36px;
+	line-height: 32px;
+}
+
+.promote_goods{
+	margin-top: 15px;
+	font-size: 12px;
+}
+
+.promote_image img{
+	width: 100%;
+	display: block;
+}
+
+.promote_goods li{
+	float: left;
+	width: 25%;
+}
+
+.promote_goods li .item_image{
+	width: 100%;
+}
+
+.promote_goods li .item_image img{
+	width: 100%;
 }
 
 /*  分享提示遮罩 */

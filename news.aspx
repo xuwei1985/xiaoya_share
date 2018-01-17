@@ -57,9 +57,9 @@
 		
 		function downloadApp(nid){
 			postClick(nid);
-			//window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+			//window.location.href = "android_down.html";
 			if (paltform == "iPhone") {//ios
-				window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+				window.location.href = "android_down.html";
 			}
 			else{
 				window.location.href ="android_down.html";
@@ -169,7 +169,7 @@
 			
 			$(".downBtn img").click(function(){
 				if (paltform == "iPhone") {//ios
-					window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+					window.location.href = "android_down.html";
 				}
 				else{
 					window.location.href ="android_down.html";
@@ -178,7 +178,7 @@
 			
 			$(".iconNav").click(function(){
 				if (paltform == "iPhone") {//ios
-					window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+					window.location.href = "android_down.html";
 				}
 				else{
 					window.location.href ="android_down.html";
@@ -187,7 +187,7 @@
 			
 			$(".cityNavBar").click(function(){
 				if (paltform == "iPhone") {//ios
-					window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+					window.location.href = "android_down.html";
 				}
 				else{
 					window.location.href ="android_down.html";
@@ -196,7 +196,7 @@
 			
 			$("#dapp").click(function(){
 				if (paltform == "iPhone") {//ios
-					window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+					window.location.href = "android_down.html";
 					//window.location.href ="android_down.html";
 				}
 				else{
@@ -222,7 +222,7 @@
 
             $(".moreComment").click(function (event) {
                 if (paltform == "iPhone") {//ios
-					window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+					window.location.href = "android_down.html";
 				}
 				else{
 					window.location.href ="android_down.html";
@@ -231,7 +231,7 @@
 
             $(".readend").click(function (event) {
                 if (paltform == "iPhone") {//ios
-					window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+					window.location.href = "android_down.html";
 				}
 				else{
 					window.location.href ="android_down.html";
@@ -240,7 +240,7 @@
 			
 			$("#newslist").on("click",".iconNav",function(){
 	            if (paltform == "iPhone") {//ios
-					window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+					window.location.href = "android_down.html";
 				}
 				else{
 					window.location.href ="android_down.html";
@@ -447,7 +447,7 @@
 			 }
             
             $(".rate").on("click",".rappbtn",function(){
-				window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+				window.location.href = "android_down.html";
 			});
 			
 			$("#content").on("click",".banner img",function(){
@@ -459,7 +459,7 @@
 			});
 			
 			$(".littelink").click(function(){
-				window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+				window.location.href = "android_down.html";
 			});
         });
     </script>
@@ -590,7 +590,7 @@
                 <tr>
                     <td style="width:44px;"><Image class="b_logo" src="http://7xloa9.com5.z0.glb.clouddn.com/AppIcon.gif" /></td>
                     <td vertical-align="middle"><asp:Image ID="bottom_img" runat="server" width="168" style="display:none;" /><img id="bottom_img2" src="images/bottom_11.gif" width="168" /></td>
-					<td width="76" text-align="center"><a id="dapp" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653" class="quickOpen">立即下载</a></td>
+					<td width="76" text-align="center"><a id="dapp" href="android_down.html" class="quickOpen">立即下载</a></td>
                     <td width="40" text-align="right" vertical-align="middle" style="padding-top:5px;">&nbsp;&nbsp;<image id="closeBtn" src="images/closebtn.png" width="20" /></td>
                 </tr>
             </table>

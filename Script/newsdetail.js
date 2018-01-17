@@ -110,7 +110,7 @@ function downloadApp(nid){
 	postClick(nid);
 	//window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
 	if (paltform == "iPhone") {//ios
-			window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+			window.location.href = "android_down.html";
 		}
 		else{
 			window.location.href ="android_down.html";

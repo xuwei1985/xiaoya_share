@@ -10,7 +10,7 @@ var catid = getParameter("catid");
 var randomNewsData;
 var randomIndex;
 var randomPage=0;
-var domain="http://share.xiaoyacity.com";
+var domain="";//http://share.xiaoyacity.com
 
 function setOriginal(n) {
     is_original = n;
@@ -212,10 +212,10 @@ function formateStyle(){
                 $("<img/>").attr("data-index", i).attr("src", $(".contentline img").eq(i).attr("src")).load(function () {
                     picRealWidth = this.width;
                     picRealHeight = this.height;
-                    
-                        
+
+
                     if (picRealWidth > documentWidth) {
-	                   
+
                         if (getFileExt($(".contentline img").eq($(this).attr("data-index")).attr("src")) != ".gif"&&($(this).attr("data-src")==undefined||$(this).attr("data-src").indexOf(".gif")==-1)) {
                             $(".contentline img").eq($(this).attr("data-index")).removeAttr("style");
                             $(".contentline img").eq($(this).attr("data-index")).css("width", "100%");
@@ -247,9 +247,9 @@ function formateStyle(){
                 var img = new Image();
                 img.src = $("img").eq($(this).attr("data-index")).attr("src");
                 if (img.width > 960) {
-                    $("img").eq($(this).attr("data-index")).removeAttr("style");
-                    $("img").eq($(this).attr("data-index")).css("width", "100%");
-                    $("img").eq($(this).attr("data-index")).css("height", "auto");
+					$("img").eq($(this).attr("data-index")).removeAttr("style");
+					$("img").eq($(this).attr("data-index")).css("width", "100%");
+					$("img").eq($(this).attr("data-index")).css("height", "auto");
                 }
 
             });
