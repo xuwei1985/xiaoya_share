@@ -81,7 +81,7 @@ fieldset{margin-bottom:10px; font-size:14px;}
 
 .top_block{
 	width: 100%;
-	background-color: #fff;
+	background-color: transparent;
 	position: fixed;
 	top: 0;
 }
@@ -93,26 +93,28 @@ fieldset{margin-bottom:10px; font-size:14px;}
 
 .random_orders{
 	width: 100%;
-	height: 78px;
-	background-color: #fff;
+	height: 64px;
+	opacity: 0.8;
 	overflow: hidden;
 	position: relative;
 }
 
 .random_orders .order_box{
 	position: absolute;
-	width: 86%;
-	height: 32px;
-	background-color: #6d6d6d;
+	width: 82%;
+	height: 34px;
+	background-color: #444;
 	overflow: hidden;
 	border-radius: 19px;
-	left: 7%;
-	top: 20px;
+	left: 9%;
+	top: 70px;
+	display:none;
+	
 }
 
 #order_icon{
 	float: left;
-	width: 26px;
+	width: 27px;
 	border-radius: 50%;
 	position: absolute;
 	top: 3px;
@@ -122,7 +124,7 @@ fieldset{margin-bottom:10px; font-size:14px;}
 #order_title{
 	float: left;
 	padding-left: 38px;
-	line-height: 32px;
+	line-height: 34px;
 	color: #fff;
 	font-size: 14px;
 }
@@ -138,6 +140,8 @@ fieldset{margin-bottom:10px; font-size:14px;}
 .promote_goods{
 	margin-top: 15px;
 	font-size: 12px;
+	margin-bottom:0px;
+	background-color:#f7f7f7;
 }
 
 .promote_image img{
@@ -145,17 +149,66 @@ fieldset{margin-bottom:10px; font-size:14px;}
 	display: block;
 }
 
-.promote_goods li{
-	float: left;
-	width: 25%;
+.promote_goods ul{
+	margin-top:5px;
 }
 
+.promote_goods li{
+	float: left;
+	width: 23%;
+	margin-left:1.5%;
+}
+
+.item_title{
+	font-size:11px;
+	color:#333;
+	height:26px;
+	overflow:hidden;
+}
 .promote_goods li .item_image{
 	width: 100%;
 }
 
 .promote_goods li .item_image img{
 	width: 100%;
+}
+.item_price{
+	margin-top:2px;
+	clear:both;
+}
+.price_left{
+	float:left;
+	color:#f00;
+	font-size:14px;
+	font-weight:bold;
+	line-height:32px;
+}
+
+.price_right{
+	float:right;
+	
+}
+
+.price_right span{
+	display:block;
+}
+
+.price_right .time_end{
+	border:1px solid #ccc;
+	border-radius:2px;
+	text-align:center;
+	font-size:9px;
+	color:#999;
+	height:12px;
+	line-height:12px;
+	width:24px;
+}
+
+.price_right .time_value{
+	text-align:left;
+	font-size:10px;
+	color:#999;
+	line-height:14px;
 }
 
 /*  分享提示遮罩 */

@@ -11,6 +11,8 @@ var randomNewsData;
 var randomIndex;
 var randomPage=0;
 var domain="";//http://share.xiaoyacity.com
+var orders=null;
+var order_play_index=0;
 
 function setOriginal(n) {
     is_original = n;
@@ -104,15 +106,70 @@ var saveViewHistoryToLocal=function(){
 	}
 }
 
-function downloadApp(nid){
-	postClick(nid);
-	//window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
-	if (paltform == "iPhone") {//ios
-			window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
-		}
-		else{
-			window.location.href ="android_down.html";
-		}
+function downloadApp(){
+	//postClick(nid);
+	window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.xilu.daao";
+	//if (paltform == "iPhone") {//ios
+	//		window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wuxuwei.xiaoya&g_f=991653";
+	//	}
+	//	else{
+	//		window.location.href ="android_down.html";
+	//	}
+}
+ 
+function getRandomOrders(){
+	//调用最新澳洲30条新闻接口
+		$.ajax({
+			 type: "get",
+			 async: false,
+			 url: "http://www.kouzibuy.com/apiv1.php?act=random_msg",
+			 dataType: "jsonp",
+			 jsonp: "callback",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(一般默认为:callback)
+			 jsonpCallback:"success_jsonpCallback",//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名，也可以写"?"，jQuery会自动为你处理数据
+			 success: function(data){
+				 if(data.code==0&&data.data&&data.data.list){
+					orders=data.data.list;
+					handlerOrders();
+				 }
+			 },
+			 error: function(){  
+							  
+			 }
+		 });
+}
+
+function handlerOrders(){
+	if(orders&&orders.length>0){
+		setTimeout(playOrderAnimation,1000);
+	}
+}
+
+function playOrderAnimation(){
+	if(orders&&orders.length>0){
+		$("#order_icon").attr("src",orders[order_play_index].header);
+		$("#order_title").text(orders[order_play_index].msg);
+		$(".order_box").css("top","70px").show();
+		runOrderBoxIn();
+		order_play_index++;
+	}
+	
+}
+
+function runOrderBoxIn(){
+  $(".order_box").animate({ 
+    top: "18px"
+  }, 500,function(){
+	  setTimeout(runOrderBoxOut,3000);
+  } );
+}
+
+function runOrderBoxOut(){
+	$(".order_box").animate({ 
+    top: "-40px"
+  }, 500,function(){
+	  $(".order_box").css("top","70px");
+	  playOrderAnimation();
+  } );
 }
 
 //get news detail info
@@ -149,7 +206,6 @@ function handlerNewsDetail(data){
 		$("#lblTime").html(data.time);
 		$(".contentline").html(data.content.replace(/动图/g, ''));
 		formateStyle();
-		
 	}
 } 
 
@@ -227,8 +283,6 @@ function formateStyle(){
         }
     }
     else {
-	    
-		
         $("br").css("display", "inline");
         $("#content").css("background-color", "#fafafa").css("width", "950px").css("font-size", "16px");
         $(".contentline span").removeAttr("style").css("font-family", "").css("font-size", "16px").css("line-height", "22px");
@@ -268,6 +322,9 @@ function initAction(){
 
 $(function(){
 	loadNews();
+	getRandomOrders();
 	initAction();
+	//http://freegeoip.net/json/?callback=foo
+	//alert(returnCitySN.cname);
 });
 
