@@ -1,186 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="format-detection" content="telephone=no"/>  
-  <title></title>
-  <link rel="stylesheet" href="Style/jquery.mobile-1.4.5.min.css">
-  <link rel="stylesheet" href="Style/style.css">
-  <link rel="stylesheet" href="Style/newsdetail.css">
-  <script src="Script/jquery-1.11.1.min.js"></script>
-  <script src="Script/jquery.mobile-1.4.5.min.js"></script>
-  <script type="text/javascript" src="Script/script.js"></script>
-  <script type="text/javascript" src="Script/newsdetail.js"></script>
-  <script type="text/javascript" src="Script/danmu.js"></script>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta name="format-detection" content="telephone=no"/>
+	<title></title>
+	<link rel="stylesheet" href="Style/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="Style/style.css">
+	<link rel="stylesheet" href="Style/newsdetail.css">
+	<script src="Script/jquery-1.11.1.min.js"></script>
+	<script src="Script/jquery.mobile-1.4.5.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script type="text/javascript" src="Script/script.js"></script>
+	<script type="text/javascript" src="Script/newsdetail.js?t=17"></script>
+	<script type="text/javascript" src="Script/danmu.js"></script>
 </head>
 <body>
-	<div data-role="page" id="mainPage"  data-theme="c">
-		<div data-role="main" id="content">
-			<div id="header">
-				<img class="messageBtn" src="http://img.wiloop.net/message.png" alt="search">
-				<img class="titleBtn" src="http://img.wiloop.net/1_11.png" style="width:128px;" alt="titleNav">
-				<img class="searchBtn" src="http://img.wiloop.net/search.png" >
-				
-				<ul class="navTab">
-					<li class="tab_0">
-			        	<a href="#" class="selected">澳洲新闻</a>
-			        </li>
-			        <li class="tab_2">
-			        	<a href="#">省钱快报</a>
-			        </li>
-			        <li class="tab_3">
-			        	<a href="#">澳洲知乎</a>
-			        </li>
-			        <li class="tab_1">
-			        	<a href="#">澳洲租房</a>
-			        </li>
-			        <div class="clear"></div>
-				</ul>
-			</div>
-			<div><img src="http://img.wiloop.net/11_02.png" width="100%" /></div>
-			<ul class="littelink">
-				<li><a href="javascript:void(0);">澳洲租房</a></li>
-				<li style="width: 2%;">·</li>
-				<li><a href="javascript:void(0);">招工找工</a></li>
-				<li style="width: 2%;">·</li>
-				<li><a href="javascript:void(0);">跳蚤市场</a></li>
-				<li style="width: 2%;">·</li>
-				<li><a href="javascript:void(0);">二手交易</a></li>
+<div data-role="page" id="mainPage"  data-theme="c">
+	<div data-role="main" id="content">
+		<div id="header">
+			<img class="messageBtn" src="http://img.wiloop.net/message.png" alt="search">
+			<img class="titleBtn" src="http://img.wiloop.net/1_11.png" style="width:128px;" alt="titleNav">
+			<img class="searchBtn" src="http://img.wiloop.net/search.png" >
+
+			<ul class="navTab">
+				<li class="tab_0">
+					<a href="#" class="selected">澳洲新闻</a>
+				</li>
+				<li class="tab_2">
+					<a href="#">省钱快报</a>
+				</li>
+				<li class="tab_3">
+					<a href="#">澳洲知乎</a>
+				</li>
+				<li class="tab_1">
+					<a href="#">澳洲租房</a>
+				</li>
 				<div class="clear"></div>
 			</ul>
-			<div class="newsRandom topstyle"></div>
-			<div class="newscontent">
-				<div class="container-fluid">
-		            <div class="row-fluid">
-		                <div class="page-header-mini">
-		                    <span id="lblTitle" style="font-size: 22px;"></span>
-		                </div>
-		                <div class="row-fluid" style="margin-top:5px;" >
-		                     <table style="width:100%; height:28px;">
-		                        <tr>
-		                            <td style="width:60%;">
-		                                <span id="lblCopyFrom" style="font-size: 10px;"></span>&nbsp;&nbsp;&nbsp;<span id="lblTime" ></span>
-		                            </td>
-		                        </tr>
-		                    </table>
-		                </div>         
-		            </div>
-		            <div class="row-fluid contentline"></div>
-		        </div> 
-		        
-		        <div class="moreComment"><span>打开小芽澳洲 查看评论(99+)</span></div>
-		        <div style="text-align: center; margin-top: -10px; margin-bottom: 10px;" id="shareNews"><img src="http://img.wiloop.net/sharen.png" width="90%" /></div>
-		        <div class="danmuCantainer">
-					<div class="danmu"> 
-						<table align="left"> 
-							<tr> 
-								<td class="danmu1" valign="top"> 
-									<table> 
-										<tr> 
-											 
-										</tr> 
-									</table> 
-								</td> 
-								<td class="danmu2" valign="top"></td> 
-							</tr> 
-						</table> 
-					</div> 
-					<div class="danmu"> 
-						<table align="left"> 
-							<tr> 
-								<td class="danmu1" valign="top"> 
-									<table> 
-										<tr> 
-											
-										</tr> 
-									</table> 
-								</td> 
-								<td class="danmu2" valign="top"></td> 
-							</tr> 
-						</table> 
-					</div> 
-					<div class="danmu"> 
-						<table align="left"> 
-							<tr> 
-								<td class="danmu1" valign="top"> 
-									<table> 
-										<tr> 
-											
-										</tr> 
-									</table> 
-								</td> 
-								<td class="danmu2" valign="top"></td> 
-							</tr> 
-						</table> 
-					</div> 
-					<div class="danmu"> 
-						<table align="left"> 
-							<tr> 
-								<td class="danmu1" valign="top"> 
-									<table> 
-										<tr> 
-											
-										</tr> 
-									</table> 
-								</td> 
-								<td class="danmu2" valign="top"></td> 
-							</tr> 
-						</table> 
-					</div> 
-<!-- 					<div class="danmuTip"><img src="Images/xiaoya_06.gif" width="50%" /><img src="Images/finger.gif" width="3%" /><img src="Images/finger.gif" width="3%" /><img src="Images/finger.gif" width="3%" /><img src="Images/xiaoya_03.png" width="32%" class="appIcon" /></div> -->
-				</div>
-<!-- 				<p><span style="color:#777;font-size:12px; padding:0 15px;">声明：部分新闻取自各大媒体,观点内容不代表小芽澳洲App立场!</span></p> -->
-		        
-			</div>
-			
-			
-	        <div class='newsline'></div>
-			<div class="essenceTopic randomTopic">
-			</div>
-
-			<div class="newTopic randomTopic">
-			</div>
-
-			<div class="newsRandom"></div>
-			<!--<div class="rate"></div><div class='newsline'></div>-->
-			
-			<!--<div class="weather"><ul></ul></div>-->
-			<div class="adv_down">
-	             <table style="width:100%;">
-	                <tr>
-	                    <td style="width:84px; padding-left: 12px;"><Image class="b_logo" src="http://img.wiloop.net/32.png" /></td>
-	                    <td vertical-align="middle">
-		                    <div style="font-size: 21px;">小芽澳洲</div>
-		                    <div style="font-size: 12px; line-height: 22px; color: #ccc;">新闻·贴吧·折扣·租房</div>
-	                    </td>
-						<td width="100" text-align="center"><a id="dapp" href="javascript:void(0);" class="quickOpen">立即下载</a></td>
-	                </tr>
-	            </table>
-		    </div>	
-			<div id="newslist"></div>
-			
-			<div class="nextPage"></div>
 		</div>
+		<div style="width: 100%;margin-top: 71px;background-color: #555; height: auto;">
+			<div style="padding: 12px;">
+				<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.xilu.daao" style="text-decoration: none;" target="_blank"><p style="font-weight: bold;color: #fff;line-height: 22px; font-size: 20px; margin: 0 0 4px 0; padding: 0 5px;">大澳网上华人超市App 当天免费送货上门 可货到付款 比家附近的华人超市更便宜</p></a>
+				<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.xilu.daao" target="_blank"><img src="http://www.wiloop.net/Images/big_ad.jpg" width="100%" border="0" /></a>
+				<div style="margin-top: 3px;">
+					<span style="float: left; font-size: 12px;color: #fff">下载量：18989</span>
+					<span style="float: right;padding: 1px 3px;font-size: 10px; color: #fff; border-radius: 3px; text-align: center; border: 1px solid #fff;">推广</span>
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+		</div>
+		<!--<div><img src="http://img.wiloop.net/11_02.png" width="100%" /></div>-->
+		<!--<ul class="littelink">-->
+		<!--<li><a href="javascript:void(0);">澳洲租房</a></li>-->
+		<!--<li style="width: 2%;">·</li>-->
+		<!--<li><a href="javascript:void(0);">招工找工</a></li>-->
+		<!--<li style="width: 2%;">·</li>-->
+		<!--<li><a href="javascript:void(0);">跳蚤市场</a></li>-->
+		<!--<li style="width: 2%;">·</li>-->
+		<!--<li><a href="javascript:void(0);">二手交易</a></li>-->
+		<!--<div class="clear"></div>-->
+		<!--</ul>-->
+		<!--<div class="newsRandom topstyle"></div>-->
+		<div class="newscontent">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="page-header-mini">
+						<span id="lblTitle" style="font-size: 22px;"></span>
+					</div>
+					<div class="row-fluid" style="margin-top:5px;" >
+						<table style="width:100%; height:28px;">
+							<tr>
+								<td style="width:60%;">
+									<span id="lblCopyFrom" style="font-size: 10px;"></span>&nbsp;&nbsp;&nbsp;<span id="lblTime" ></span>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="row-fluid contentline"></div>
+			</div>
+
+			<div class="moreComment"><span>打开小芽澳洲 查看评论(99+)</span></div>
+			<div style="text-align: center; margin-top: -10px; margin-bottom: 10px;" id="shareNews"><img src="http://img.wiloop.net/sharen.png" width="90%" /></div>
+			<div class="danmuCantainer">
+				<div class="danmu">
+					<table align="left">
+						<tr>
+							<td class="danmu1" valign="top">
+								<table>
+									<tr>
+
+									</tr>
+								</table>
+							</td>
+							<td class="danmu2" valign="top"></td>
+						</tr>
+					</table>
+				</div>
+				<div class="danmu">
+					<table align="left">
+						<tr>
+							<td class="danmu1" valign="top">
+								<table>
+									<tr>
+
+									</tr>
+								</table>
+							</td>
+							<td class="danmu2" valign="top"></td>
+						</tr>
+					</table>
+				</div>
+				<div class="danmu">
+					<table align="left">
+						<tr>
+							<td class="danmu1" valign="top">
+								<table>
+									<tr>
+
+									</tr>
+								</table>
+							</td>
+							<td class="danmu2" valign="top"></td>
+						</tr>
+					</table>
+				</div>
+				<div class="danmu">
+					<table align="left">
+						<tr>
+							<td class="danmu1" valign="top">
+								<table>
+									<tr>
+
+									</tr>
+								</table>
+							</td>
+							<td class="danmu2" valign="top"></td>
+						</tr>
+					</table>
+				</div>
+				<!-- 					<div class="danmuTip"><img src="Images/xiaoya_06.gif" width="50%" /><img src="Images/finger.gif" width="3%" /><img src="Images/finger.gif" width="3%" /><img src="Images/finger.gif" width="3%" /><img src="Images/xiaoya_03.png" width="32%" class="appIcon" /></div> -->
+			</div>
+			<!-- 				<p><span style="color:#777;font-size:12px; padding:0 15px;">声明：部分新闻取自各大媒体,观点内容不代表小芽澳洲App立场!</span></p> -->
+
+		</div>
+
+
+		<div class='newsline'></div>
+		<div class="essenceTopic randomTopic">
+		</div>
+
+		<div class="newTopic randomTopic">
+		</div>
+
+
+		<div style="width: 100%;margin-top: -25px;background-color: #555; height: auto; margin-bottom: 10px;">
+			<div style="padding: 12px;">
+				<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.xilu.daao" style="text-decoration: none;" target="_blank"><p style="font-weight: bold;color: #fff;line-height: 22px; font-size: 20px; margin: 0 0 4px 0; padding: 0 5px;">大澳网上华人超市App 当天免费送货上门 可货到付款 比家附近的华人超市更便宜</p></a>
+				<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.xilu.daao" target="_blank"><img src="http://www.wiloop.net/Images/big_ad.jpg" width="100%" border="0" /></a>
+				<div style="margin-top: 3px;">
+					<span style="float: left; font-size: 12px;color: #fff">下载量：18989</span>
+					<span style="float: right;padding: 1px 3px;font-size: 10px; color: #fff; border-radius: 3px; text-align: center; border: 1px solid #fff;">推广</span>
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+		</div>
+		<!--<div class="newsRandom"></div>-->
+
+		<!--<div class="rate"></div><div class='newsline'></div>-->
+
+		<!--<div class="weather"><ul></ul></div>-->
+		<div class="adv_down">
+			<table style="width:100%;">
+				<tr>
+					<td style="width:84px; padding-left: 12px;"><Image class="b_logo" src="http://img.wiloop.net/32.png" /></td>
+					<td vertical-align="middle">
+						<div style="font-size: 21px;">小芽澳洲</div>
+						<div style="font-size: 12px; line-height: 22px; color: #ccc;">新闻·贴吧·折扣·租房</div>
+					</td>
+					<td width="100" text-align="center"><a id="dapp" href="javascript:void(0);" class="quickOpen">立即下载</a></td>
+				</tr>
+			</table>
+		</div>
+		<div id="newslist"></div>
+
+		<div class="nextPage"></div>
 	</div>
-	<div style='margin:0 auto;display:none;'>
-		<img id='wx_pic' src="http://img.wiloop.net/32.png" />
-  	</div>
-  	
-  	<div class="maskbg" ></div>
-	<div class="downtip">
-		<p><img src="Images/rarrow.png" width="48"  /></br>点击右上角的“…” </br>发送给你微信朋友或</br>分享到朋友圈</p>
-	</div>
-	
+</div>
+<div style='margin:0 auto;display:none;'>
+	<img id='wx_pic' src="http://img.wiloop.net/32.png" />
+</div>
+
+<div class="maskbg" ></div>
+<div class="downtip">
+	<p><img src="Images/rarrow.png" width="48"  /></br>点击右上角的“…” </br>发送给你微信朋友或</br>分享到朋友圈</p>
+</div>
+
 </body>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-76237433-2', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-76237433-2', 'auto');
+    ga('send', 'pageview');
 
 </script>
 </html>

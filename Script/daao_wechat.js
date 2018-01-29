@@ -13,6 +13,8 @@ var randomPage=0;
 var domain="";//http://share.xiaoyacity.com
 var orders=null;
 var order_play_index=0;
+var _czc = _czc || [];
+_czc.push(["_setAccount", "1272586626"]);
 
 function setOriginal(n) {
     is_original = n;
@@ -122,7 +124,7 @@ function getRandomOrders(){
 		$.ajax({
 			 type: "get",
 			 async: false,
-			 url: "http://www.kouzibuy.com/apiv1.php?act=random_msg",
+			 url: "http://www.kouzibuy.com/apiv1.php?act=random_msg_web",
 			 dataType: "jsonp",
 			 jsonp: "callback",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(一般默认为:callback)
 			 jsonpCallback:"success_jsonpCallback",//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名，也可以写"?"，jQuery会自动为你处理数据
@@ -327,40 +329,94 @@ function handlerJump() {
         var num=str.indexOf("?")
         str=str.substr(num); //取得所有参数   stringvar.substr(start [, length ]
 
-        window.location.href=domain+"/newsdetail.html"+str;
+        window.location.href=domain+"/newsdetail2.html"+str;
 	}
 }
 
+function showShareTip(){
+	if ($(".downtip").css("display")=="none") {
+		var ttop =20 + $(document).scrollTop();
+		$(".maskbg").css({
+            "width": document.documentElement.clientWidth+"px",
+            "height":document.body.scrollHeight+"px",
+			"opacity":0.85
+        });
+		
+        $(".downtip").css({
+            "top": ttop,
+        });
+        $(".maskbg").show();
+        $(".downtip").show();
+	}
+}
 
 function initAction(){
     $(".app_down").on("click",function(){
         if(_czc){
-            _czc.push(["_trackEvent","新闻详情","点击","顶部下载",getParameter("id"),""]);
+			if(returnCitySN.cname.toLowerCase()!="australia"){
+				_czc.push(["_trackEvent","新闻详情_cn","点击","顶部下载",getParameter("id"),""]);
+			}
+			else{
+				_czc.push(["_trackEvent","新闻详情","点击","顶部下载",getParameter("id"),""]);
+			}
+            
         }
         setTimeout(function(){
 			window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.xilu.daao";
-		},140);
+		},720);
     });
 
     $(".promote_goods li").on("click",function(){
-        if(_czc){
-            _czc.push(["_trackEvent","新闻详情","点击","商品下载",getParameter("id"),""]);
-        }
+		var g_index=$(this).attr("data-index");
+        
+		if(returnCitySN.cname.toLowerCase()!="australia"){
+			if(_czc){
+				_czc.push(["_trackEvent","新闻详情_cn","点击","商品_"+g_index+"下载",getParameter("id"),""]);
+			}
+		}
+		else{
+			if(_czc){
+				_czc.push(["_trackEvent","新闻详情","点击","商品_"+g_index+"下载",getParameter("id"),""]);
+			}
+		}
 		
 		setTimeout(function(){
 			window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.xilu.daao";
-		},140);
+		},720);
     });
+	
+	$(".maskbg").click(function () {
+        $(".maskbg").hide();
+        $(".downtip").hide();
+
+    });
+
+    $(".downtip").click(function (event) {
+        $(".maskbg").hide();
+        $(".downtip").hide();
+    });
+	
+	$("#shareNews").click(function(){
+		showShareTip();
+	})
 
 }
 $(function(){
+	
 	loadNews();
 	getRandomOrders();
 	initAction();
-    //handlerJump();
+    handlerJump();
+	
 	
 	if(_czc){
-        _czc.push(["_trackEvent","新闻详情","初始化","初始化页面",getParameter("id"),""]);
+		if(returnCitySN.cname.toLowerCase()!="australia"){
+			_czc.push(["_trackEvent","新闻详情_cn","初始化","初始化页面",getParameter("id"),""]);
+		}
+		else{
+			_czc.push(["_trackEvent","新闻详情","初始化","初始化页面",getParameter("id"),""]);
+		}
+        
     }
 	//http://freegeoip.net/json/?callback=foo
 
