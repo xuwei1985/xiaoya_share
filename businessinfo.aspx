@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
     <meta media="(device-height: 568px)" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
     <link href="Style/news.css" rel="stylesheet" />
-    <script src="Script/jquery-1.11.1.min.js"></script>
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
     <script>
         var pic_real_width, pic_real_height;
 

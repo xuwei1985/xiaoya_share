@@ -10,7 +10,7 @@
     <title></title>
     <link href="Style/style.css" rel="stylesheet" />
     <link href="Style/info.css" rel="stylesheet" />
-    <script src="Script/jquery-1.11.1.min.js"></script>
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="Script/script.js"></script>
 	<script>
 		function getParameter(sProp) {
@@ -91,9 +91,9 @@
     <form id="form1" runat="server">
 	<div data-role="main" id="content">
     	<div id="header">
-			<img class="messageBtn" src="http://img.wiloop.net/message.png" alt="search">
-			<img class="titleBtn" src="http://img.wiloop.net/titleNav.png" alt="titleNav">
-			<img class="searchBtn" src="http://img.wiloop.net/search.png" >
+			<img class="messageBtn" src="<%=image_url %>message.png" alt="search">
+			<img class="titleBtn" src="<%=image_url %>titleNav.png" alt="titleNav">
+			<img class="searchBtn" src="<%=image_url %>search.png" >
 			
 			<ul class="navTab">
 				<li class="tab_0">
@@ -114,7 +114,7 @@
 	</div>
     <asp:Panel ID="Panel3" runat="server">
     <div class="mainPage">
-	    <div><img src="http://img.wiloop.net/11_02.png" width="100%" /></div>
+	    <div><img src="<%=image_url %>11_02.png" width="100%" /></div>
 		<ul class="littelink">
 			<li><a href="javascript:void(0);">澳洲租房</a></li>
 			<li style="width: 2%;">·</li>
@@ -136,7 +136,8 @@
                         <tr>
                             <td style="width:18px; text-align:left;"><img id="userHeader" src="Images/AppIcon.jpg" width="20" height="20" runat="server" /></td>
                             <td> <asp:Label ID="lblNickname" runat="server" Text="Label" CssClass="nickname"></asp:Label>  </td>
-                            <td style="width:90px; text-align:right;"><asp:Label ID="lblPubishTime" runat="server" Text="Label" CssClass="publishTime"></asp:Label></td>
+                            <td style="width:90px; text-align:right;"><asp:Label ID="lblPubishTime" runat="server" Text="Label" CssClass="publishTime"></asp:Label>
+                                <asp:Label ID="lblreadcount" runat="server" Text="" Visible="false"></asp:Label></td>
                         </tr>
                     </table>
                 </div>
@@ -230,13 +231,13 @@
 -->
 
 	    <div style='margin:0 auto;display:none;'>
-			<img id='wx_pic' src="http://img.wiloop.net/32.png" />
+			<img id='wx_pic' src="<%=image_url %>32.png" />
 	  	</div>
     </form>
     <div class="adv_down">
          <table style="width:100%;">
             <tr>
-                <td style="width:64px; padding-left: 12px;"><Image class="b_logo" src="http://img.wiloop.net/32.png" /></td>
+                <td style="width:64px; padding-left: 12px;"><Image class="b_logo" src="<%=image_url %>32.png" /></td>
                 <td vertical-align="middle">
                     <div style="font-size: 21px;">小芽澳洲</div>
                     <div style="font-size: 12px; line-height: 22px; color: #ccc;">新闻·贴吧·折扣·租房</div>

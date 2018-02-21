@@ -14,6 +14,15 @@ var domain="";//http://share.xiaoyacity.com
 var orders=null;
 var order_play_index=0;
 var _czc = _czc || [];
+var appId = "wx162b2af5577dba75";
+var timeStamp = getTimeStamp();
+var noncestr = "xiaoya";
+var state = "xiaoya";
+var share_title="";
+var share_des="";
+var share_link="";
+var share_icon="";
+
 _czc.push(["_setAccount", "1272586626"]);
 
 function setOriginal(n) {
@@ -210,6 +219,8 @@ function handlerNewsDetail(data){
 		if(is_original=="1"){
 			$("#lblTime").hide();
 		}
+		
+		share_title=data.title;
 		$(document).attr("title",data.title);
 		$("#lblTitle").html(data.title);
 		$("#lblCopyFrom").html(data.copyfrom);
@@ -275,6 +286,10 @@ function formateStyle(){
 			                $("#wxshareimg").attr("src", $(".contentline img").eq(i).attr("src"));
 			            }
 */
+			if (i==0) {
+					//$("#wxshareimg").attr("src", $(".contentline img").eq(i).attr("src"));
+					share_icon=$(".contentline img").eq(i).attr("src");
+				}
                 $("<img/>").attr("data-index", i).attr("src", $(".contentline img").eq(i).attr("src")).load(function () {
                     picRealWidth = this.width;
                     picRealHeight = this.height;
@@ -401,12 +416,103 @@ function initAction(){
 	})
 
 }
+
+
+function getSign(){
+    $.ajax({
+        type: "get",
+        url: "/index.ashx?c=ajaxnews&a=getsign",
+        data: {noncestr:noncestr, timestamp:timeStamp,url:window.location.href},
+        dataType: "json",
+        beforeSend:function(){
+
+        },
+        success: function(data){
+            //var obj=JSON.parse(data.data);
+            var obj = eval('(' + data.data + ')');
+            if(obj.code=="0") {
+                if(obj.sign!=null&&obj.sign!=undefined) {
+                    initWXConfig(obj.sign);
+                }
+            }
+            else {
+                alert(data.err_msg);
+            }
+        },
+        error: function(){
+        }
+    });
+}
+
+function initWXConfig(signature){
+    wx.config({
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: appId, // 必填，公众号的唯一标识，aa3ecfe3da55ba39e817d6f19f70725d
+        timestamp: timeStamp, // 必填，生成签名的时间戳
+        nonceStr: noncestr, // 必填，生成签名的随机串
+        signature: signature,// 必填，签名，见附录1
+        jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+    });
+
+    wx.ready(function(){
+        initWXShare();
+        // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+    });
+
+    wx.error(function(res){
+        // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+    });
+
+    wx.checkJsApi({
+        jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+        success: function(res) {
+            // 以键值对的形式返回，可用的api值true，不可用为false
+            // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+        }
+    });
+
+}
+
+function initWXShare() {
+    share_des="小芽澳洲";
+    share_link=window.location.href;
+
+    wx.onMenuShareAppMessage({
+        title: share_title, // 分享标题
+        desc: share_des, // 分享描述
+        link: share_link,
+        imgUrl: share_icon,
+        type: '', // 分享类型,music、video或link，不填默认为link
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+        success: function () {
+            // 用户确认分享后执行的回调函数
+        },
+        cancel: function () {
+            // 用户取消分享后执行的回调函数
+        }
+    });
+
+    wx.onMenuShareTimeline({
+        title: share_title, // 分享标题
+        link:share_link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: share_icon, // 分享图标
+        success: function () {
+            // 用户确认分享后执行的回调函数
+        },
+        cancel: function () {
+            // 用户取消分享后执行的回调函数
+        }
+    });
+}
+
+
+getSign();
 $(function(){
 	
 	loadNews();
 	getRandomOrders();
 	initAction();
-    handlerJump();
+    //handlerJump();
 	
 	
 	if(_czc){

@@ -578,8 +578,9 @@ fieldset{margin-bottom:10px; font-size:14px;}
 	background-color: #333;
 	font-size: 14px;
 	padding-bottom: 10px;
-	display: none;
+	 padding-top: 10px;
 }
+
 .danmuCantainer td{
 	white-space:nowrap;
 	width: 50px;
@@ -600,9 +601,11 @@ fieldset{margin-bottom:10px; font-size:14px;}
 }
 .danmuCantainer .danmuTip{
 	color: #fff;
-	font-size: 22px;
-	text-align: center;
-	font-weight: bold;
+	font-size: 14px;
+	text-align: left;
+	font-weight: normal;
+	margin-left: 5px;
+	margin-top: 5px;
 }
 .danmuCantainer img{
 	position: relative;
